@@ -3,3 +3,4 @@
 // import "./private";
 
 import "./prototypes/test";
+import "./prototype";
