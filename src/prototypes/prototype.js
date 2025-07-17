@@ -33,7 +33,7 @@ Counter.prototype.incrementFactory = function (incrementStep) {
    * return a function with 'this' bound
    * to the object use to invoke the
    * incrementFactory method
-   * return incrementFN.dind(this);
+   * return incrementFN.bind(this);
    */
   return () => {
     this.value += incrementStep;
