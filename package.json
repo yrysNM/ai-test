@@ -1,19 +1,19 @@
 {
-  "name": "nuxt-hello-world",
-  "version": "1.0.0",
+  "name": "ai-izdeu",
   "private": true,
+  "version": "0.1.0",
+  "description": "AI Іздеу MVP — Almaty flower search + WhatsApp handoff",
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev:api": "npm run dev -w @ai-izdeu/api",
+    "dev:web": "npm run dev -w @ai-izdeu/web",
+    "build:api": "npm run build -w @ai-izdeu/api",
+    "build:web": "npm run build -w @ai-izdeu/web",
+    "start:api": "npm run start -w @ai-izdeu/api"
   },
-  "dependencies": {
-    "bootstrap": "^5.3.2",
-    "core-js": "^3.25.3",
-    "nuxt": "^2.15.8",
-    "vue": "^2.7.10",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
+  "engines": {
+    "node": ">=20"
   }
 }

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "prod-pink-roses-15",
+    "shopId": "shop-gul-almaty",
+    "title": "15 қызғылт раушан",
+    "titleRu": "15 розовых роз",
+    "category": "flowers",
+    "city": "almaty",
+    "priceKzt": 12000,
+    "occasion": ["ана", "мама", "день рождения", "туған күн"],
+    "tags": ["раушан", "розы", "қызғылт", "розовые", "букет"]
+  },
+  {
+    "id": "prod-pink-roses-25",
+    "shopId": "shop-gul-almaty",
+    "title": "25 қызғылт раушан",
+    "titleRu": "25 розовых роз",
+    "category": "flowers",
+    "city": "almaty",
+    "priceKzt": 18000,
+    "occasion": ["ана", "мама", "романтика"],
+    "tags": ["раушан", "розы", "қызғылт", "розовые"]
+  },
+  {
+    "id": "prod-white-chrys",
+    "shopId": "shop-gul-almaty",
+    "title": "Ақ хризантема букеті",
+    "titleRu": "Букет белых хризантем",
+    "category": "flowers",
+    "city": "almaty",
+    "priceKzt": 9000,
+    "occasion": ["кеңсе", "офис", "құттықтау"],
+    "tags": ["хризантема", "ақ", "белые"]
+  },
+  {
+    "id": "prod-tulips-mix",
+    "shopId": "shop-florahome",
+    "title": "Микс қызғалдақ 21",
+    "titleRu": "Микс тюльпанов 21 шт",
+    "category": "flowers",
+    "city": "almaty",
+    "priceKzt": 14000,
+    "occasion": ["көктем", "весна", "сыйлық"],
+    "tags": ["қызғалдақ", "тюльпаны", "микс"]
+  },
+  {
+    "id": "prod-red-roses-101",
+    "shopId": "shop-florahome",
+    "title": "101 қызыл раушан",
+    "titleRu": "101 красная роза",
+    "category": "flowers",
+    "city": "almaty",
+    "priceKzt": 45000,
+    "occasion": ["романтика", "ұсыныс", "предложение"],
+    "tags": ["раушан", "розы", "қызыл", "красные"]
+  },
+  {
+    "id": "prod-peony-box",
+    "shopId": "shop-florahome",
+    "title": "Пион қорапшасы",
+    "titleRu": "Коробка с пионами",
+    "category": "flowers",
+    "city": "almaty",
+    "priceKzt": 22000,
+    "occasion": ["мерейтой", "юбилей"],
+    "tags": ["пион", "коробка", "премиум"]
+  },
+  {
+    "id": "prod-no-price-demo",
+    "shopId": "shop-gul-almaty",
+    "title": "Маусымдық микс (бағасы жоқ)",
+    "titleRu": "Сезонный микс (без цены)",
+    "category": "flowers",
+    "city": "almaty",
+    "priceKzt": null,
+    "occasion": [],
+    "tags": ["микс"]
+  }
+]

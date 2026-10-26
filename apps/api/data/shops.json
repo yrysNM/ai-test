@@ -1,0 +1,20 @@
+[
+  {
+    "id": "shop-gul-almaty",
+    "name": "Gül Almaty",
+    "nameKk": "Гүл Алматы",
+    "city": "almaty",
+    "address": "пр. Абая 44, Алматы",
+    "whatsapp": "77001234567",
+    "category": "flowers"
+  },
+  {
+    "id": "shop-florahome",
+    "name": "FloraHome",
+    "nameKk": "ФлораХоум",
+    "city": "almaty",
+    "address": "ул. Сатпаева 30А, Алматы",
+    "whatsapp": "77007654321",
+    "category": "flowers"
+  }
+]
