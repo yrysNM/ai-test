@@ -1,69 +1,75 @@
-# nuxt-hello-world
+# AI Іздеу MVP
 
-## Build Setup
+Almaty flower search with AI matching and **WhatsApp handoff** only. No on-site checkout, courier, or 500 ₸ fee collection.
+
+**Stack:** Nuxt 3 (`apps/web`) · Express + TypeScript (`apps/api`) · Ollama Cloud
+
+**Design:** [Superdesign canvas](docs/superdesign-canvas.md)
+
+## Screens
+
+| Route | Purpose |
+|-------|---------|
+| `/` | Home — brand + natural-language search |
+| `/results` | Ranked offers (prices required) |
+| `/preview` | WhatsApp message draft → `wa.me` |
+| `/shop` | Shop cabinet stub |
+
+UI: Kazakh + Russian. Brand: **AI Іздеу**.
+
+## Setup
 
 ```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+git clone https://github.com/yrysNM/ai-test.git
+cd ai-test
+npm install
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+Copy env (names only in `.env.example`):
 
-## Special Directories
+```bash
+cp .env.example apps/api/.env
+# set OLLAMA_API_KEY, OLLAMA_HOST, OLLAMA_MODEL
+```
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+Optional for Nuxt: create `apps/web/.env` with `NUXT_PUBLIC_API_BASE=http://localhost:3001`.
 
-### `assets`
+## Run
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+Terminal 1 — API (`:3001`):
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+```bash
+npm run dev:api
+```
 
-### `components`
+Terminal 2 — Web (`:3000`):
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+```bash
+npm run dev:web
+```
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+Open http://localhost:3000
 
-### `layouts`
+## API
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+- `GET /health`
+- `GET /api/products?q=&category=flowers&city=almaty`
+- `POST /api/search` `{ "query": "...", "lang": "kk" | "ru" }`
+- `POST /api/whatsapp-preview` `{ "offerId": "...", "query": "...", "lang": "kk" | "ru" }`
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+AI must **not invent missing prices** — offers without a price are omitted.
 
+## Smoke
 
-### `pages`
+With API running and a valid `OLLAMA_API_KEY`:
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+```bash
+curl -s http://localhost:3001/health
+curl -s -X POST http://localhost:3001/api/search -H "content-type: application/json" -d "{\"query\":\"қызғылт раушан 15000\",\"lang\":\"kk\"}"
+```
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+## Product rules
 
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+- Search + WhatsApp only
+- Pilot: Almaty flowers
+- No payment UI on site

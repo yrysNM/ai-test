@@ -1,0 +1,12 @@
+﻿Design the HOME screen for mobile app AI Іздеу (390×844). One composition, brand-first.
+
+MUST:
+- Brand wordmark "AI Іздеу" is the hero-level signal (larger than any headline). No eyebrow-only branding.
+- One short supporting line in Kazakh + Russian hint: natural-language flower search for Almaty.
+- Single search field with placeholder like «Анама қызғылт раушан, 15000 теңгеге дейін» and primary CTA "Іздеу".
+- Subtle soft sage/mist atmosphere (gradient or soft organic wash) — not flat white; not purple; not cream/terracotta editorial.
+- No cards in the hero. No stats, chips clusters, payment, cart, or 500 ₸ fee UI.
+- Bottom hint: WhatsApp-қа өту · без оплаты на сайте
+- Use ONLY fonts, colors, spacing from the design system. Do not introduce fonts/colors/styles not in the design system.
+
+Feel: calm local trust for Almaty flowers; Manrope; forest #01472E primary.
